@@ -1,0 +1,8 @@
+pre-commit:
+  parallel: true
+  commands:
+    check:
+      glob: "*.{js,ts,jsx,tsx,json}"
+      run: >-
+        pnpm run check "{staged_files}"
+        && git add "{staged_files}"
